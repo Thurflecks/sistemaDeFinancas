@@ -1,0 +1,28 @@
+{
+  "name": "sistemasdefinancas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thurflecks/sistemasDeFinancas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thurflecks/sistemasDeFinancas/issues"
+  },
+  "homepage": "https://github.com/Thurflecks/sistemasDeFinancas#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.11.3",
+    "sequelize": "^6.37.5"
+  }
+}
