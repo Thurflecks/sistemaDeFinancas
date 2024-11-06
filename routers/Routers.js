@@ -1,14 +1,16 @@
 const express = require("express")
 const router = express.Router()
 
-router.post("/", (req, res) => {
-    const { name, password } = req.body;
-    console.log(name, password);
-    res.send(`name: ${name} and password: ${password}`);
-});
 
-router.get("/login", (req, res) => {
-    res.render("login")
+router.get("/singIn", (req, res) => {
+    res.render("singIn")
 })
 
+router.get('/singUp', (req, res) => {
+    res.render("singUp")
+})
+
+router.post("/", (req, res) => {
+  
+});
 module.exports = router

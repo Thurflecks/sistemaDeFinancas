@@ -6,37 +6,52 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-main{
-    height: 100vh;
-    width: 100vw;
-    background-image: url("https://images8.alphacoders.com/137/1375007.jpg");
+body {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+}
+.main{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #460715;
+}
+.sectionPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .container {
     display: flex;
-    
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    background-color: transparent;
+    justify-content: center;
+    align-content: center;
+    background-color: #761328;
     flex-direction: column;
+    border-radius: 9px;
 }
 .formLogin {
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
     margin: 30px;
+    justify-content: center;
     align-items: center;
     gap: 15px;
 }
 .formLogin label {
     font-size: 15px;
-    color: aliceblue;
+    color: rgb(250, 214, 214);
 }
 .formLogin input {
-    padding: 6px 10px;
+    padding: 8px;
     border-radius: 5px;
     width: 300px;
     border: none;
+    outline: none;
+    background-color: rgb(250, 214, 214);
 }
 .formLogin button {
     border: none;
@@ -45,14 +60,66 @@ main{
     font-size: 14px ;
     cursor: pointer;
     background-color: transparent;
-    color: aliceblue;
-    border: 1px solid #DAA520;
+    color: rgb(250, 214, 214);
+    border: 1px solid rgb(250, 214, 214);
+    transition: 0.3s ease;
+}
+.formLogin button:hover{
+    background-color: rgb(250, 214, 214);
+    color: #e6101b;
+}
+.singUp{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    gap: 20px;
 }
 .singUp a {
+    text-align: center;
     font-size: 14px;
+    height: 31px;
     padding: 6px 10px;
     text-decoration: none;
     border-radius: 5px;
-    color: aliceblue;
-    border: 1px solid blue;
+    background-color: rgb(250, 214, 214);
+    border: 1px solid rgb(250, 214, 214);
+    color: #e6101b;
+    transition: 0.3s ease;
+}
+.singUp a:hover{
+    background-color: #761328;
+    color: rgb(250, 214, 214);
+}
+.navLogin{
+    display: flex;
+    justify-content: end;
+}
+.tituloLogin{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px;
+    text-align: center;
+    gap: 12px;
+}
+.tituloLogin p{
+    font-size: 20px;
+}
+.tituloLogin h1{
+    color: rgb(250, 214, 214);
+    font-size: 35px;
+}
+.footer{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: end;
+}
+.footer p{
+    font-weight: 900;
+    color: rgb(250, 214, 214);
+}
+#entrar{
+    font-size: 20px;
+    font-weight:700;
 }
