@@ -131,3 +131,33 @@ body {
 .h2logo{
     text-align: center;
 }
+.mainHomePage{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #460715;
+}
+.navHome {
+    display: flex;
+    justify-content: space-around;
+
+}
+.navHome a{
+    text-decoration: none;
+    padding: 20px;
+    color: rgb(250, 214, 214);
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.list li{
+    color: rgb(250, 214, 214);
+}
+.list img{
+    width: 100px;
+    height: 100px;
+}

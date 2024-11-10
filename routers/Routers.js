@@ -8,14 +8,13 @@ const verifyLogin = require("../midlleware/verifyLogin")
 router.get("/singIn", (req, res) => {
     try {
         res.render("singIn")
-    } catch(err) {
+    } catch (err) {
         console.log(err)
     }
 })
-router.post("/singIn/logando", verifyLogin, async(req, res) => {
+router.post("/singIn/logando", verifyLogin, async (req, res) => {
     try {
         const { email, password } = req.body
-        console.log("oi valores aqui", email, password)
         await userModel.findOne({
             where: { email: email, senha: password }
         }).then((usuario) => {
@@ -24,18 +23,22 @@ router.post("/singIn/logando", verifyLogin, async(req, res) => {
                 email: usuario.email,
             }
             res.redirect('/')
-        }).catch (err => {
+        }).catch(err => {
             res.send("erro ao logar")
             console.log(err)
         })
-    } catch(err) {
+    } catch (err) {
         console.log(err)
     }
 })
 
 
 router.get('/singUp', (req, res) => {
-    res.render("singUp")
+    try {
+        res.render("singUp")
+    } catch (err) {
+        console.log(err)
+    }
 })
 router.post("/signUp/NewAccount", verifyLogin, async (req, res) => {
     try {
@@ -50,12 +53,12 @@ router.post("/signUp/NewAccount", verifyLogin, async (req, res) => {
             dataNasc: dataNasc
         });
         res.redirect("/singIn")
-    } catch(err){
+    } catch (err) {
         console.log(err)
     }
 })
 
 router.get("/", authenticate, (req, res) => {
-    res.send("logado com sucesso")
+    res.render("homepage")
 });
 module.exports = router
