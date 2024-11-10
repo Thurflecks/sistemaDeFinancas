@@ -18,11 +18,6 @@ app.engine("handlebars", engine({
 
 app.set("view engine", "handlebars")
 
-app.use(express.json());
-
-app.use(express.urlencoded({ extended: true }));
-
-app.use(router)
 
 app.use(session({
     secret: 'senhaDoSistemaDeFinanças',
@@ -30,6 +25,12 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false }
 }));
+
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(router)
 
 app.listen(port, () => {
     console.log("site online no ar: http://localhost:8000")

@@ -24,6 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    gap: 80px;
 }
 .container {
     display: flex;
@@ -122,4 +123,11 @@ body {
 #entrar{
     font-size: 20px;
     font-weight:700;
+}
+.logo{
+    width: 300px;
+    height: 300px;
+}
+.h2logo{
+    text-align: center;
 }

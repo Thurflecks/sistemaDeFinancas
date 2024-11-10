@@ -1,7 +1,11 @@
 <main class="main">
     <section class="sectionPrincipal">
+        <div>
+            <img src="/images/logo.png" class="logo" alt="logo">
+            <h2 class="h2logo">Finanças Fellas</h2>
+        </div>
         <section class="container">
-            <form action="" class="formLogin" method="post">
+            <form action="/signUp/NewAccount" class="formLogin" method="post">
                 <label for="nome">Seu Nome Completo:</label>
                 <input type="text" name="nome" id="nome" required>
 
@@ -15,7 +19,7 @@
                 <input type="date" name="dataNasc" id="dataNasc" required>
 
                 <label for="password">Nova Senha:</label>
-                <input type="password" name="password" id="password" minlength="8" maxlength="8" required>
+                <input type="password" name="password" id="password" minlength="4" maxlength="8" required>
 
                 <button type="submit">Criar Conta</button>
             </form>
@@ -31,6 +35,6 @@
 
 <script>
     const data = new Date().toISOString().slice(0, 10);
-
+    console.log(data)
     document.getElementById("dataNasc").setAttribute("max", data)
 </script>
