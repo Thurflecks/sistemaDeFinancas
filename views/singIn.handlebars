@@ -1,24 +1,78 @@
 <main class="main">
     <section class="sectionPrincipal">
-        <section class="container">
-            <form action="/singIn/logando" class="formLogin" method="post">
-                <label for="text" id="entrar">Entrar:</label>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-                <label for="password">Senha:</label>
-                <input type="password" name="password" id="password" minlength="4" maxlength="8" required>
-                <button type="submit">Entrar</button>
-            </form>
-            <div class="singUp">
-                <a href="/singUp">Sing Up</a>
+        <div id="containerIn">
+            <section class="container">
+                <form id="form" action="/singIn/logando" class="formLogin" method="post">
+                    <label for="text" id="entrar">Entrar:</label>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" id="password" minlength="4" maxlength="8" required>
+                    <button type="submit">Entrar</button>
+                </form>
+                <div class="singUp" id="singUp">
+                    <button>Sing Up</button>
+                </div>
+            </section>
+            <div class="divlog">
+                <img src="/images/logo.png" class="logo" alt="logo">
+                <h2 class="h2logo">Finanças Fellas</h2>
             </div>
-        </section>
-        <div>
-            <img src="/images/logo.png" class="logo" alt="logo">
-            <h2 class="h2logo">Finanças Fellas</h2>
+        </div>
+
+        <div id="containerUp">
+            <div class="divlog1">
+                <img src="/images/logo.png" class="logo" alt="logo">
+                <h2 class="h2logo">Finanças Fellas</h2>
+            </div>
+            <section class="container1">
+                <form action="/signUp/NewAccount" class="formLogin" method="post">
+                    <label for="nome">Seu Nome Completo:</label>
+                    <input type="text" name="nome" id="nome" required>
+
+                    <label for="email">Seu Melhor E-mail:</label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="endereco">Seu Endereço:</label>
+                    <input type="text" name="endereco" id="endereco" required>
+
+                    <label for="dataNasc">Data de Nascimento:</label>
+                    <input type="date" name="dataNasc" id="dataNasc" required>
+
+                    <label for="password">Nova Senha:</label>
+                    <input type="password" name="password" id="password" minlength="4" maxlength="8" required>
+
+                    <button type="submit">Criar Conta</button>
+                </form>
+                <div class="singIn" id="singIn">
+                    <button>Sing In</button>
+                </div>
+            </section>
         </div>
     </section>
     <footer class="footer">
         <p>By Thurflecks</p>
     </footer>
 </main>
+
+<script>
+
+    const containerIn = document.getElementById("containerIn")
+    const containerUp = document.getElementById("containerUp")
+
+    const singIn = document.getElementById("singIn")
+    const singUp = document.getElementById("singUp")
+    
+    singUp.addEventListener("click", displayUp)
+
+    function displayUp() {
+        containerIn.classList.add("hide") 
+        containerUp.classList.add("show")
+    }
+    singIn.addEventListener("click", displayIn)
+
+    function displayIn() {
+        containerIn.classList.remove("hide") 
+        containerUp.classList.remove("show") 
+    }
+</script>

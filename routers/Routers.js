@@ -5,7 +5,7 @@ const authenticate = require("../midlleware/authenticate")
 const verifyLogin = require("../midlleware/verifyLogin")
 
 
-router.get("/singIn", (req, res) => {
+router.get("/singIn", verifyLogin,(req, res) => {
     try {
         res.render("singIn")
     } catch (err) {
@@ -32,14 +32,6 @@ router.post("/singIn/logando", verifyLogin, async (req, res) => {
     }
 })
 
-
-router.get('/singUp', (req, res) => {
-    try {
-        res.render("singUp")
-    } catch (err) {
-        console.log(err)
-    }
-})
 router.post("/signUp/NewAccount", verifyLogin, async (req, res) => {
     try {
         console.log(req.body)

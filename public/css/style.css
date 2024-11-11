@@ -7,26 +7,42 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 body {
-    display: flex;
-    margin: 0 auto;
-    position: relative;
-}
-.main{
-    display: flex;
+    margin: 0;
+    padding: 0;
     min-height: 100vh;
     width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #460715;
-}
-.sectionPrincipal{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #460715;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sectionPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
     gap: 80px;
 }
+
 .container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #761328;
+    flex-direction: column;
+    border-radius: 9px;
+}
+.container1 {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -76,7 +92,29 @@ body {
     margin: 30px;
     gap: 20px;
 }
-.singUp a {
+.singUp button {
+    text-align: center;
+    font-size: 14px;
+    height: 31px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: rgb(250, 214, 214);
+    border: 1px solid rgb(250, 214, 214);
+    color: #e6101b;
+    transition: 0.3s ease;
+}
+.singIn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    gap: 20px;
+}
+.singIn button:hover{
+    background-color: #761328;
+    color: rgb(250, 214, 214);
+}
+.singIn button {
     text-align: center;
     font-size: 14px;
     height: 31px;
@@ -88,7 +126,7 @@ body {
     color: #e6101b;
     transition: 0.3s ease;
 }
-.singUp a:hover{
+.singUp button:hover{
     background-color: #761328;
     color: rgb(250, 214, 214);
 }
@@ -160,4 +198,38 @@ body {
 .list img{
     width: 100px;
     height: 100px;
+}
+#containerIn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#containerUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#containerIn.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+#containerUp.show {
+    opacity: 1;
+    visibility: visible;
 }
