@@ -6,22 +6,25 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+}
+
+body {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #460715;
 }
 
 .main {
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #460715;
-    min-height: 100vh;
+    height: 100%; 
     width: 100%;
 }
 
@@ -29,10 +32,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    width: 100%;
+    flex: 1;
     gap: 80px;
+    position: relative;
+    width: 100%;
 }
+
 
 .container {
     display: flex;
@@ -200,7 +205,7 @@ body {
     height: 100px;
 }
 #containerIn {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -210,10 +215,10 @@ body {
     gap: 50px;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 #containerUp {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -223,7 +228,7 @@ body {
     gap: 50px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 #containerIn.hide {
     opacity: 0;
@@ -232,4 +237,9 @@ body {
 #containerUp.show {
     opacity: 1;
     visibility: visible;
+}
+.imgNav {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }

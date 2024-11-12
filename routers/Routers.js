@@ -53,4 +53,8 @@ router.post("/signUp/NewAccount", verifyLogin, async (req, res) => {
 router.get("/", authenticate, (req, res) => {
     res.render("homepage")
 });
+
+router.get("*/",(rewq, res) => {
+    res.send("Nenhuma rota encontrada")
+})
 module.exports = router
