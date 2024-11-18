@@ -171,9 +171,6 @@ body {
     width: 300px;
     height: 300px;
 }
-.h2logo{
-    text-align: center;
-}
 .mainHomePage{
     display: flex;
     min-height: 100vh;
@@ -192,18 +189,7 @@ body {
     padding: 20px;
     color: rgb(250, 214, 214);
 }
-.list{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.list li{
-    color: rgb(250, 214, 214);
-}
-.list img{
-    width: 100px;
-    height: 100px;
-}
+
 #containerIn {
     position: fixed;
     top: 50%;
@@ -242,4 +228,27 @@ body {
     width: 30px;
     height: 30px;
     margin-right: 10px;
+}
+.user {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.user p{
+    color: rgb(250, 214, 214);
+    font-size: 30px;
+    font-weight: bold;
+}
+.logoHome {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.logoHome a {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(250, 214, 214);
 }

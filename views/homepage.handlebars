@@ -1,18 +1,20 @@
 <main class="mainHomePage">
     <section>
-        <nav class="navHome">
+        <div class="logoHome">
             <a href=""><img class="imgNav" src="/images/logo.png" alt="img log">Finanças Fellas</a>
+        </div>
+        <nav class="navHome">
             <a href="">Receitas</a>
             <a href="">Perfil</a>
             <a href="">About</a>
         </nav>
-        <section class="list">
-            <ul>
-                <li>Gastos</li>
-                <li>Receitas</li>
-                <li>Saldo Total</li>
-            </ul>
-            <img src="/images/logo.png" alt="img log">
+        <section class="infoUser">
+            <div class="user">
+                <p>ola {{User.nome}}, seja bem-vindo!!!</p>
+            </div>
+            <div class="divSaldo">
+                <p>Saldo: {{user.saldo}}</p>
+            </div>
         </section>
     </section>
     <footer class="footer">

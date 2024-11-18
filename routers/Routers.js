@@ -50,8 +50,14 @@ router.post("/signUp/NewAccount", verifyLogin, async (req, res) => {
     }
 })
 
-router.get("/", authenticate, (req, res) => {
-    res.render("homepage")
+router.get("/", authenticate, async(req, res) => {
+    try {
+        const User = await userModel.findByPk(req.session.user.id)
+      
+        res.render("homepage", { User })
+    } catch(err) {
+        console.log(err)
+    }
 });
 
 router.get("*/",(rewq, res) => {
